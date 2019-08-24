@@ -52,7 +52,7 @@
                             <th>ID </th>
                             <th>Patch</th>
                             <th>Correctness </th>
-                            <th>Report</th>
+                            <th>Bug Report</th>
                         </tr>
                     </thead>
 		            <tbody>
@@ -107,12 +107,12 @@
                         <tr>
                             <td>Libtiff</td>
                             <td>bugzilla 2633</td>
-                            <td><pre><code class="language-diff">//define global variable to record buffer size
+                            <td><pre><code class="language-diff">//define global variable to record buffer size/base
 -    malloc(size);
 +    global_base_cp = size;
 +    malloc(global_base_cp);
 
-// patch based on predefined global buffer size 
+// patch based on predefined global buffer size/base 
 -    for (; cc < tf_bytesperrow; cc += samplesperpixel) {
 +    for (; cc < tf_bytesperrow && nc+3 < global_base_cp; cc += samplesperpixel) {</code></pre></td>
 							<td>Plausible</td>
@@ -122,42 +122,48 @@
                         <tr>
                             <td>Libtiff</td>
                             <td>CVE-2016-10094</td>
-                            <td><pre><code class="language-diff">
-
-							</code></pre></td>
-                            <td></td>
+                            <td><pre><code class="language-diff">    int retTIFFReadRawTile;
+     /* Ignore EOI marker of JpegTables */
+     _TIFFmemcpy(buffer, jpt, count - 2);
+-    bufferoffset += count - 2;
++    bufferoffset = (-1+(LOWFAT_GLOBAL_MS__tif_unix__TIFFmalloc_316-count));
+     /* Store last 2 bytes of the JpegTables */</code></pre></td>
+                            <td>Plausible</td>
+                            <td><a href="http://bugzilla.maptools.org/show_bug.cgi?id=2633">report</a></td>
                         </tr>
                         <tr>
                             <td>Libtiff</td>
                             <td>CVE-2017-7601</td>
-                            <td><pre><code class="language-diff">
-
-							</code></pre></td>
-                            <td></td>
+                            <td><pre><code class="language-diff">+        if( td->td_bitspersample > 64 )
++        {
++            return (0);
++        }</code></pre></td>
+							<td>Plausible</td>
+                            <td><a href="http://bugzilla.maptools.org/show_bug.cgi?id=2648">report</a></td>
                         </tr>
                         <tr>
                             <td>Libtiff</td>
                             <td>CVE-2016-3623</td>
-                            <td><pre><code class="language-diff">
-
+                            <td><pre><code class="language-diff">+    if (vertSubSampling == 0) return 1;
 							</code></pre></td>
-                            <td></td>
+							<td>Semantically equivalent</td>
+							<td><a href="http://bugzilla.maptools.org/show_bug.cgi?id=2569">report</a></td>
                         </tr>
                         <tr>
                             <td>Libtiff</td>
                             <td>CVE-2017-7595</td>
-                            <td><pre><code class="language-diff">
-
-							</code></pre></td>
-                            <td></td>
+                            <td><pre><code class="language-diff">+    if (sp->h_sampleing == 0) return 1;
+                            </code></pre></td>
+                            <td>Semantically equivalent</td>
+							<td><a href="http://bugzilla.maptools.org/show_bug.cgi?id=2653">report</a></td>
                         </tr>
                         <tr>
                             <td>Libtiff</td>
                             <td>bugzilla 2611</td>
-                            <td><pre><code class="language-diff">
-
-							</code></pre></td>
-                            <td></td>
+                            <td><pre><code class="language-diff">-    if (cc%sp->bytes_per_line!=0)
++    if (sp->bytes_per_line == 0 || cc%sp->bytes_per_line!=0)</code></pre></td>
+							<td>Semantically equivalent</td>
+							<td><a href="http://bugzilla.maptools.org/show_bug.cgi?id=2611">report</a></td>
                         </tr>
                         
                         
@@ -166,19 +172,25 @@
                         <tr>
                             <td>Binutils</td>
                             <td>CVE-2018-10372</td>
-                            <td><pre><code class="language-diff">
+                            <td><pre><code class="language-diff">//define global variable to record buffer size/base
+-    signature = malloc(size);
++    global_size_signature = size;
++    signature = malloc(global_size_signature);
++    global_base_signature = signature;
 
-							</code></pre></td>
+// patch based on predefined global buffer size/base 
++    if (ph + num_copy >= global_base_signature + global_size_signature)
++    return 0;</code></pre></td>
                             <td>Plausible</td>
 							<td><a href="https://bugzilla.gnome.org/show_bug.cgi?id=763071">report</a></td>
                         </tr>
                         <tr>
                             <td>Binutils</td>
                             <td>CVE-2017-15025</td>
-                            <td><pre><code class="language-diff">
-
-							</code></pre></td>
-                            <td>Plausible</td>
+                            <td><pre><code class="language-diff">     case DW_LNS_const_add_pc:
++    if (lh.line_range == 0)
++        return 0;</code></pre></td>
+                            <td>Semantically equivalent</td>
 							<td><a href="https://bugzilla.gnome.org/show_bug.cgi?id=758605">report</a></td>
                         </tr>
                         
@@ -188,37 +200,47 @@
                         <tr>
                             <td>Libxml2</td>
                             <td>CVE-2016-1834</td>
-                            <td><pre><code class="language-diff">
-
-							</code></pre></td>
+                            <td><pre><code class="language-diff">-    if (len < 0))
++    if (len<0 || size < 0 || len>Max+size))"</code></pre></td>
                             <td>Plausible</td>
 							<td><a href="https://bugzilla.gnome.org/show_bug.cgi?id=763071">report</a></td>
                         </tr>
                         <tr>
                             <td>Libxml2</td>
                             <td>CVE-2016-1838</td>
-                            <td><pre><code class="language-diff">
+                            <td><pre><code class="language-diff">//define global variable to record buffer size/base
+-    malloc(size);
++    global_size_cur = size;
++    malloc(global_size_cur);
 
-							</code></pre></td>
+// patch based on predefined global buffer size/base 
+    if ((tlen > 0) && (xmlStrncmp(ctxt->input->cur, ctxt->name, tlen) == 0)) {
+-       if (ctxt->input->cur[tlen] == '>') {
++       if (tlen + 1 < global_size_cur) && (ctxt->input->cur[tlen] == '>')) {	</code></pre></td>
                             <td>Plausible</td>
 							<td><a href="https://bugzilla.gnome.org/show_bug.cgi?id=758588">report</a></td>
                         </tr>
                         <tr>
                             <td>Libxml2</td>
                             <td>CVE-2012-5134</td>
-                            <td><pre><code class="language-diff">
-
-							</code></pre></td>
-                            <td>Plausible</td>
+                            <td><pre><code class="language-diff"> if ((in_space) && (normalize)) {
+-    while (buf[len - 1] == 0x20) len--;
++    while ((len > 0) && (buf[len - 1] == 0x20)) len--;    
+ }
+ buf[len] = 0;
+</code></pre></td>
+                            <td>Syntactic equivalent</td>
 							<td><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=158249">report</a></td>
                         </tr>
                         <tr>
                             <td>Libxml2</td>
                             <td>CVE-2017-5969</td>
-                            <td><pre><code class="language-diff">
-
-							</code></pre></td>
-                            <td>Plausible</td>
+                            <td><pre><code class="language-diff">-    if ((content->c1->type == XML_ELEMENT_OR) ||
+-        (content->c1->type == XML_ELEMENT_SEQ))
++   if ((content->c1 != NULL) &&
++       ((content->c1->type == XML_ELEMENT_OR) ||
++       (content->c1->type == XML_ELEMENT_SEQ)))</code></pre></td>
+                            <td>Syntactic equivalent</td>
 							<td><a href="https://bugzilla.gnome.org/show_bug.cgi?id=778519">report</a></td>
                         </tr>
                         
@@ -228,9 +250,15 @@
                         <tr>
                             <td>Libjpeg</td>
                             <td>CVE-2018-14498</td>
-                            <td><pre><code class="language-diff">
+                            <td><pre><code class="language-diff">//define global variable to record buffer size/base
+-    malloc(size);
++    global_size_cp = size;
++    malloc(global_size_cp);
 
-							</code></pre></td>
+// patch based on predefined global buffer size/base
++    if (t >= global_size_cp)
++         ERREXIT(cinfo);
+     *outptr++ = colormap[0][t]; /* can omit GETJSAMPLE() safely */</code></pre></td>
                             <td>Plausible</td>
 							<td><a href="https://github.com/libjpeg-turbo/libjpeg-turbo/issues/258">report</a></td>
                         </tr>
@@ -248,13 +276,26 @@
                         <tr>
                             <td>Libjpeg</td>
                             <td>CVE-2017-15232</td>
-                            <td><pre><code class="language-diff">
-
-							</code></pre></td>
-                            <td>Plausible</td>
+                            <td><pre><code class="language-diff">+    if (output_buf == NULL && num_rows) {
++        ERREXIT(0);
++    }</code></pre></td>
+                            <td>Semantically equivalent</td>
 							<td><a href="https://github.com/mozilla/mozjpeg/issues/268">report</a></td>
                         </tr>
-                        
+                        <tr>
+                            <td>Libjpeg</td>
+                            <td>CVE-2012-2806</td>
+                            <td><pre><code class="language-diff">-  for (i = 0; i < cinfo->num_components; i++)
++  for (i = 0; i < 4; i++)
+     cinfo->cur_comp_info[i] = NULL;
+   for (i = 0; i < n; i++) {
+     INPUT_BYTE(cinfo, cc, return FALSE);
+     INPUT_BYTE(cinfo, c, return FALSE);
+-    for (ci = 0, compptr = cinfo->comp_info; ci < cinfo->num_components;
++    for (ci = 0, compptr = cinfo->comp_info; ci < cinfo->num_components && ci < 4;</code></pre></td>
+                            <td>Semantically equivalent</td>
+							<td><a href="https://github.com/mozilla/mozjpeg/issues/268">report</a></td>
+                        </tr>
                         
                         
                         
@@ -262,19 +303,23 @@
                         <tr>
                             <td>Coreutils</td>
                             <td>Bugzilla 26545</td>
-                            <td><pre><code class="language-diff">
-
-							</code></pre></td>
-                            <td>Plausible</td>
+                            <td><pre><code class="language-diff">-    for (i = 3; i < size / 2; i *= 2)
++    for (i = 3; i <= size / 2; i *= 2)
+         memcpy (r + i, r, i);
+     if (i < size)
+         memcpy (r + i, r, size - i);</code></pre></td>
+                            <td>Syntactic equivalent</td>
 							<td><a href="https://debbugs.gnu.org/cgi/bugreport.cgi?bug=26545">report</a></td>
                         </tr>
                         <tr>
                             <td>Coreutils</td>
                             <td>GNUBug 25003</td>
-                            <td><pre><code class="language-diff">
-
-							</code></pre></td>
-                            <td>Plausible</td>
+                            <td><pre><code class="language-diff">     end = (k == n) ? file_size : k * (file_size / n);
+-    if (initial_read != SIZE_MAX || start < initial_read)
++    if (start < initial_read){
+         memmove (buf, buf + start, initial_read - start);
+         initial_read -= start;</code></pre></td>
+                            <td>Syntactic equivalent</td>
 							<td><a href="https://debbugs.gnu.org/cgi/bugreport.cgi?bug=25003">report</a></td>
                         </tr>
                         
@@ -284,27 +329,20 @@
                         <tr>
                             <td>Jasper</td>
                             <td>CVE-2016-8691</td>
-                            <td><pre><code class="language-diff">
-
-							</code></pre></td>
-                            <td>Plausible</td>
-							<td><a href="https://blogs.gentoo.org/ago/2016/10/16/jasper-two-divide-by-zero-in-jpc_dec_process_siz-jpc_dec-c/">report</a></td>
-                        </tr>
-                        <tr>
-                            <td>Jasper</td>
-                            <td>CVE-2016-8692</td>
-                            <td><pre><code class="language-diff">
-
-							</code></pre></td>
-                            <td>Plausible</td>
+                            <td><pre><code class="language-diff">+   if(cmpt->hstep)
++        return 0;
+     cmpt->width = JPC_CEILDIV(dec->xend, cmpt->hstep) -
+		  JPC_CEILDIV(dec->xstart, cmpt->hstep);</code></pre></td>
+                            <td>Semantically equivalent</td>
 							<td><a href="https://blogs.gentoo.org/ago/2016/10/16/jasper-two-divide-by-zero-in-jpc_dec_process_siz-jpc_dec-c/">report</a></td>
                         </tr>
                         <tr>
                             <td>Jasper</td>
                             <td>CVE-2016-9387</td>
-                            <td><pre><code class="language-diff">
-
-							</code></pre></td>
+                            <td><pre><code class="language-diff">+    if(dec->yend <= dec->tileyoff)
++        return -1;
+     dec->numvtiles = JPC_CEILDIV(dec->yend - dec->tileyoff, dec->tileheight);
+     dec->numtiles = dec->numhtiles * dec->numvtiles;</code></pre></td>
                             <td>Plausible</td>
 							<td><a href="https://blogs.gentoo.org/ago/2016/11/16/jasper-multiple-assertion-failure/">report</a></td>
                         </tr>
@@ -315,20 +353,37 @@
                         <tr>
                             <td>FFmpeg</td>
                             <td>CVE-2017-9992</td>
-                            <td><pre><code class="language-diff">
+                            <td><pre><code class="language-diff">//define global variable to record buffer size/base
+-    frame = malloc(size);
++    global_size_frame = size;
++    signature = malloc(global_size_frame);
++    global_base_frame = frame;
 
-							</code></pre></td>
-                            <td>Plausible</td>
+// patch based on predefined global buffer size/base 
+-    if (frame_end - frame < width + 3)
++    if (global_base_frame + global_size_frame - frame < width + 4)
+         return AVERROR_INVALIDDATA;
+         frame[0] = frame[1] = </code></pre></td>
+                            <td>Semantic equivalent</td>
 							<td><a href="https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=1345">report</a></td>
                         </tr>
                         <tr>
                             <td>FFmpeg</td>
                             <td>Bugzilla-1404</td>
+                            <td><pre><code class="language-diff">    h->sym_factor = h->dist[0] * h->scale_den[1];
++    if (h->sym_factor > 32768) {
++        return AVERROR_INVALIDDATA;</code></pre></td>
+                            <td>Semantic equivalent</td>
+							<td><a href="https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=1404">report</a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
                             <td><pre><code class="language-diff">
 
 							</code></pre></td>
-                            <td>Plausible</td>
-							<td><a href="https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=1404">report</a></td>
+                            <td> </td>
+							<td> </td>
                         </tr>
                         
                         
