@@ -39,7 +39,7 @@
 	  		<div class="abstract">
 	  		<p> 
 	  		<img src="architecture.jpg" align="right" height="250" weight="250">
-	  		Automated program repair can be used to prevent exploitation of known security vulnerabilities by attackers. The large potential impact of security vulnerabilities means that the need to avoid incomplete or incorrect fixes is paramount. In this paper, we present a new mechanism for automatically generating provably correct repair of security vulnerabilities. Given a program vulnerability witnessed by some crashing input or exploit, our basic approach relies on extracting a constraint representation of the underlying cause of the crash.  This crash constraint can then be propagated backward to guide program repair over the space of possible fix locations. Our method synthesizes patch that are guaranteed to avoid repeating the original crash, thereby repairing the program for all program inputs not limited to a specific test suite.  As such, our approach helps address the test over-fitting problem (where a suggested repair fails to generalize beyond a given test suite).  An implementation of our method (ExtractFix) built on top of the KLEE symbolic execution engine shows its efficacy in fixing a wide range of vulnerabilities/bugs on subjects taken from CVEs and Google's Open-source-systems OSS Fuzz framework.</p>
+	  		Automated program repair can be used to prevent exploitation of known security vulnerabilities by attackers. The large potential impact of security vulnerabilities means that the need to avoid incomplete or incorrect fixes is paramount. In this paper, we present a new mechanism for automatically generating provably correct repair of security vulnerabilities. Given a program vulnerability witnessed by some crashing input or exploit, our basic approach relies on extracting a constraint representation of the underlying cause of the crash.  This crash constraint can then be propagated backward to guide program repair over the space of possible fix locations. Our method synthesizes patch that is guaranteed to avoid repeating the original crash, thereby repairing the program for all program inputs not limited to a specific test suite.  As such, our approach helps address the test over-fitting problem (where a suggested repair fails to generalize beyond a given test suite).  An implementation of our method (ExtractFix) built on top of the KLEE symbolic execution engine shows its efficacy in fixing a wide range of vulnerabilities/bugs on subjects taken from CVEs and Google's Open-source-systems OSS Fuzz framework.</p>
 	  		</div>
 	  	</div>
         <div class="container">
@@ -72,7 +72,7 @@
                             <td><pre><code class="language-diff">    rows[0] = br + bpr*sy;
 	err += step;
 -   while (err >= limit)
-+   while (err >= limit & nrows <256)
++   while (err >= limit && nrows <256)
 	    err -= limit;
 	    sy++;</code></pre></td>
                             <td>Semantically equivalent</td>
@@ -109,12 +109,12 @@
                             <td>bugzilla 2633</td>
                             <td><pre><code class="language-diff">//define global variable to record buffer size/base
 -    malloc(size);
-+    global_base_cp = size;
-+    malloc(global_base_cp);
++    global_size_cp = size;
++    malloc(global_size_cp);
 
 // patch based on predefined global buffer size/base 
 -    for (; cc < tf_bytesperrow; cc += samplesperpixel) {
-+    for (; cc < tf_bytesperrow && nc+3 < global_base_cp; cc += samplesperpixel) {</code></pre></td>
++    for (; cc < tf_bytesperrow && nc+3 < global_size_cp; cc += samplesperpixel) {</code></pre></td>
 							<td>Plausible</td>
 							<td><a href="http://bugzilla.maptools.org/show_bug.cgi?id=2633">report</a></td>
                             <td></td>
@@ -122,11 +122,17 @@
                         <tr>
                             <td>Libtiff</td>
                             <td>CVE-2016-10094</td>
-                            <td><pre><code class="language-diff">    int retTIFFReadRawTile;
+                            <td><pre><code class="language-diff">//define global variable to record buffer size/base
+-    malloc(size);
++    global_size_buffer = size;
++    malloc(global_size_buffer);
+
+// patch based on predefined global buffer size/base 
+     int retTIFFReadRawTile;
      /* Ignore EOI marker of JpegTables */
      _TIFFmemcpy(buffer, jpt, count - 2);
 -    bufferoffset += count - 2;
-+    bufferoffset = (-1+(LOWFAT_GLOBAL_MS__tif_unix__TIFFmalloc_316-count));
++    bufferoffset = (-1+(global_size_buffer-count));
      /* Store last 2 bytes of the JpegTables */</code></pre></td>
                             <td>Plausible</td>
                             <td><a href="http://bugzilla.maptools.org/show_bug.cgi?id=2633">report</a></td>
@@ -356,7 +362,7 @@
                             <td><pre><code class="language-diff">//define global variable to record buffer size/base
 -    frame = malloc(size);
 +    global_size_frame = size;
-+    signature = malloc(global_size_frame);
++    frame = malloc(global_size_frame);
 +    global_base_frame = frame;
 
 // patch based on predefined global buffer size/base 
