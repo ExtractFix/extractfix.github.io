@@ -1,0 +1,38 @@
+[
+   [
+      "data flow",
+      "../../../../src/libjasper/jpc/jpc_dec.c",
+      "jpc_dec_process_siz",
+      1193,
+      [ "compno" ]
+   ],
+   [
+      "data flow",
+      "../../../../src/libjasper/jpc/jpc_dec.c",
+      "jpc_dec_process_siz",
+      1192,
+      [ "compno" ]
+   ],
+   [
+      "data flow",
+      "../../../../src/libjasper/jpc/jpc_dec.c",
+      "jpc_dec_process_siz",
+      1191,
+      [ "compno" ]
+   ],
+   [
+      "data flow",
+      "../../../../src/libjasper/jpc/jpc_dec.c",
+      "jpc_dec_process_siz",
+      1190,
+      [ "compno" ]
+   ],
+   [
+      "control flow",
+      "../../../../src/libjasper/jpc/jpc_dec.c",
+      "jpc_dec_process_siz",
+      1188,
+      [ "compno" ]
+   ]
+]
+

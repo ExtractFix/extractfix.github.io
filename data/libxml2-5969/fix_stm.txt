@@ -1,0 +1,1 @@
+   	    if ((content->c2->type == XML_ELEMENT_CONTENT_OR) || ((content->c2->type == XML_ELEMENT_CONTENT_SEQ) && (content->c2->ocur != XML_ELEMENT_CONTENT_ONCE))

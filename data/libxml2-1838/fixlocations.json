@@ -1,0 +1,31 @@
+[
+   [
+      "control flow",
+      "../parser.c",
+      "xmlParseEndTag2",
+      9836,
+      [ "tlen", "LOWFAT_GLOBAL_MS__buf_xmlBufGrowInternal_486" ]
+   ],
+   [
+      "control flow",
+      "../parser.c",
+      "xmlParseEndTag2",
+      9834,
+      [ "tlen", "LOWFAT_GLOBAL_MS__buf_xmlBufGrowInternal_486" ]
+   ],
+   [
+      "control flow",
+      "../parser.c",
+      "xmlParseEndTag2",
+      9830,
+      [ "tlen", "LOWFAT_GLOBAL_MS__buf_xmlBufGrowInternal_486" ]
+   ],
+   [
+      "control flow",
+      "../parser.c",
+      "xmlParseEndTag2",
+      9829,
+      [ "tlen", "LOWFAT_GLOBAL_MS__buf_xmlBufGrowInternal_486" ]
+   ]
+]
+

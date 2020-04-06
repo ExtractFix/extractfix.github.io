@@ -1,0 +1,1 @@
+if(!cmpt->vstep != 0) return 0;

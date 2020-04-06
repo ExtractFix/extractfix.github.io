@@ -1,0 +1,1 @@
+if ((tsize_t)dir->tdir_offset != offset - cc || offset > (tsize_t)tif->tif_size

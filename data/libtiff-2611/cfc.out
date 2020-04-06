@@ -1,0 +1,1 @@
+../../libtiff/tif_ojpeg.c:OJPEGDecodeRaw:826#(sp->bytes_per_line != 0)

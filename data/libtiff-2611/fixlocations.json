@@ -1,0 +1,17 @@
+[
+   [
+      "control flow",
+      "../../tools/tif_ojpeg.c",
+      "OJPEGDecodeRaw",
+      816,
+      [ "sp->bytes_per_line", "cc" ]
+   ],
+   [
+      "control flow",
+      "../../tools/tif_ojpeg.c",
+      "OJPEGDecode",
+      797,
+      [ "cc", "tif" ]
+   ]
+]
+

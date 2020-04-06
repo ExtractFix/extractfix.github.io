@@ -1,0 +1,1 @@
+                && ARG_MUST_BE_SENT_BY_REF(EX(fbc), opline->op2.opline_num)) {

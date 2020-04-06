@@ -1,0 +1,6 @@
+(Or (Not (Eq false
+              (Eq 0
+                   normalize)))
+     (Ule 0
+          (Add 18446744073709551615
+                len)))

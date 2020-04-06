@@ -1,0 +1,5 @@
+(Or (Not (Sle  limit
+                err))
+     (Ult  nrows
+          256))
+

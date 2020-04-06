@@ -1,0 +1,4 @@
+	if (output_buf == NULL && num_rows) {
+	    ERREXIT(1);
+ 	}
+	for (row = 0; row < num_rows; row++) {

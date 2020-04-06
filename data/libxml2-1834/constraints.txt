@@ -1,0 +1,16 @@
+(Eq false
+     (Eq 0
+         (Or (And (And (Slt 0
+                             size)
+                       (Slt 0
+                             len))
+                  (Slt  size
+                       (Sub 2147483647
+                             len)))
+             (And (And (Slt  size
+                            0)
+                       (Slt  len
+                            0))
+                  (Slt (Sub 18446744071562067968
+                             len)
+                        size)))))

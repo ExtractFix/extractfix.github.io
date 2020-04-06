@@ -1,0 +1,24 @@
+[
+   [
+      "control flow",
+      "jqmarker.c",
+      "get_sos",
+      329,
+      [ "i", "cinfo->num_component", "4"]
+   ],
+   [
+      "control flow",
+      "jqmarker.c",
+      "get_sos",
+      336,
+      [ "compptr", "cinfo->num_component", "ci", "n, "i", "4"]
+   ],
+   [
+      "control flow",
+      "jqmarker.c",
+      "get_sos",
+      323,
+      [ "n", "length", "4"]
+   ]
+]
+

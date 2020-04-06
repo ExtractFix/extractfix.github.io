@@ -1,0 +1,31 @@
+[
+   [
+      "control flow",
+      "../../libtiff/tif_dirwrite.c",
+      "TIFFWriteDirectoryTagSubifd",
+      1745,
+      [ "pa" ]
+   ],
+   [
+      "control flow",
+      "../../libtiff/tif_dirwrite.c",
+      "TIFFWriteDirectoryTagSubifd",
+      1743,
+      [ "pa", "p", "tif->tif_dir.td_nsubifd" ]
+   ],
+   [
+      "control flow",
+      "../../libtiff/tif_dirwrite.c",
+      "TIFFWriteDirectoryTagSubifd",
+      1736,
+      [ "pa", "p", "o" ]
+   ],
+   [
+      "control flow",
+      "../../libtiff/tif_dirwrite.c",
+      "TIFFWriteDirectoryTagSubifd",
+      1729,
+      [ "tif", "tif->tif_flags", "TIFF_BIGTIFF" ]
+   ]
+]
+

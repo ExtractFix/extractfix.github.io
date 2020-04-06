@@ -1,0 +1,1 @@
+    if (LOWFAT_GLOBAL_MS__dfa_dfa_decode_init_50 + LOWFAT_GLOBAL_MS__dfa_dfa_decode_init_49 - frame < width + 4)

@@ -1,0 +1,32 @@
+[
+   [
+      "control flow",
+      "../../ext/date/php_date",
+      "date_interval_format",
+      3645,
+      [ "t", "have_format_spec" ]
+   ],
+
+   [
+      "control flow",
+      "../../ext/date/php_date",
+      "date_interval_format",
+      3644,
+      [ "t", "have_format_spec", "i", "format_len" ]
+   ],
+   [
+      "control flow",
+      "../../ext/date/php_date",
+      "date_interval_format",
+      3640,
+      [ "t", "format_len" ]
+   ],
+   [
+      "control flow",
+      "../../ext/date/php_date",
+      "date_interval_initialize",
+      3657,
+      [ "p" ]
+   ]
+]
+

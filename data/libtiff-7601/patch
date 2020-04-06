@@ -1,0 +1,4 @@
+if(!td->td_bitspersample <= 64)
+{
+return 0;
+}

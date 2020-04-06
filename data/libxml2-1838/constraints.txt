@@ -1,0 +1,11 @@
+(And (Or (Not (Eq 1
+                    tlen))
+          (Ult  tlen
+                LOWFAT_GLOBAL_MS__buf_xmlBufGrowInternal_486))
+      (Or (Not (And (Slt 0
+                          tlen)
+                    (Eq false
+                        (Eq 1
+                             tlen))))
+          (Ult  tlen
+                LOWFAT_GLOBAL_MS__buf_xmlBufGrowInternal_486)))

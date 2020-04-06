@@ -1,0 +1,38 @@
+[
+   [
+      "control flow",
+      "../../src/buffer.c",
+      "buffer_prepare_append",
+      115,
+      [ "b->ptr" ]
+   ],
+   [
+      "data flow",
+      "../../src/buffer.c",
+      "buffer_prepare_append",
+      111,
+      [ "b->ptr", "size", "b->size" ]
+   ],
+   [
+      "control flow",
+      "../../src/buffer.c",
+      "buffer_prepare_append",
+      107,
+      [ "b->ptr", "size", "b->size" ]
+   ],
+   [
+      "control flow",
+      "../../src/buffer.c",
+      "buffer_prepare_append",
+      105,
+      [ "b->ptr", "size", "b->size" ]
+   ],
+   [
+      "control flow",
+      "../../src/buffer.c",
+      "buffer_prepare_append",
+      168,
+      [ "dest->ptr", "str->used" ]
+   ]
+]
+

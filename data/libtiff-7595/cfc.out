@@ -1,0 +1,1 @@
+../../libtiff/tif_jpeg.c:JPEGSetupEncode:1687#((sp->v_sampling * 8) != 0)

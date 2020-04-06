@@ -1,0 +1,1 @@
+	for (compno = 0, cmpt = dec->cmpts; compno < dec->numcomps; ++compno,

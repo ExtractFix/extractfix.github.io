@@ -1,0 +1,73 @@
+[
+   [
+      "data flow",
+      "../src/make-prime-list.c",
+      "main",
+      216,
+      [ "i", "LOWFAT_GLOBAL_MS__make_prime_list_xalloc_163" ]
+   ],
+   [
+      "control flow",
+      "../src/make-prime-list.c",
+      "main",
+      215,
+      [ "size", "i", "LOWFAT_GLOBAL_MS__make_prime_list_xalloc_163" ]
+   ],
+   [
+      "control flow",
+      "../src/make-prime-list.c",
+      "main",
+      212,
+      [ "size", "i", "p", "j", "LOWFAT_GLOBAL_MS__make_prime_list_xalloc_163" ]
+   ],
+   [
+      "data flow",
+      "../src/make-prime-list.c",
+      "main",
+      210,
+      [ "i", "nprimes", "p", "LOWFAT_GLOBAL_MS__make_prime_list_xalloc_163" ]
+   ],
+   [
+      "data flow",
+      "../src/make-prime-list.c",
+      "main",
+      207,
+      [ "i", "p", "LOWFAT_GLOBAL_MS__make_prime_list_xalloc_163" ]
+   ],
+   [
+      "control flow",
+      "../src/make-prime-list.c",
+      "main",
+      205,
+      [ "size", "i", "LOWFAT_GLOBAL_MS__make_prime_list_xalloc_163" ]
+   ],
+   [
+      "data flow",
+      "../src/make-prime-list.c",
+      "main",
+      197,
+      [ "size", "i", "limit", "LOWFAT_GLOBAL_MS__make_prime_list_xalloc_163" ]
+   ],
+   [
+      "control flow",
+      "../src/make-prime-list.c",
+      "main",
+      194,
+      [ "i", "limit", "LOWFAT_GLOBAL_MS__make_prime_list_xalloc_163" ]
+   ],
+   [
+      "control flow",
+      "../src/make-prime-list.c",
+      "main",
+      190,
+      [ "i", "limit", "LOWFAT_GLOBAL_MS__make_prime_list_xalloc_163" ]
+   ],
+   [
+      "control flow",
+      "../src/make-prime-list.c",
+      "main",
+      183,
+      [ "i", "argc", "LOWFAT_GLOBAL_MS__make_prime_list_xalloc_163" ]
+   ]
+]
+

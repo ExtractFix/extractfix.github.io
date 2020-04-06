@@ -1,0 +1,17 @@
+[
+   [
+      "control flow",
+      "../../Zend/:zend_vm_execute.h",
+      "ZEND_INIT_STATIC_METHOD_CALL_SPEC_CONST_CONST_HANDLER",
+      3401,
+      [ "opline", "opline->op1", "opline->op1.literal" ]
+   ],
+   [
+      "control flow",
+      "../../Zend/:zend_vm_execute.h",
+      "ZEND_INIT_STATIC_METHOD_CALL_SPEC_CONST_CONST_HANDLER",
+      3399,
+      [ "IS_CONST", "opline", "opline->op1", "opline->op1.literal" ]
+   ]
+]
+

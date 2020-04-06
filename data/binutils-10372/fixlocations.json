@@ -1,0 +1,206 @@
+[
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9290,
+      [ "do_display", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9283,
+      [ "nused", "row", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9280,
+      [ "row", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9279,
+      [ "row", "amount", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9277,
+      [ "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9275,
+      [ "nslots", "i", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9265,
+      [ "do_display", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9243,
+      [ "do_display", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9236,
+      [ "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9230,
+      [ "ncols", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "data flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9220,
+      [ "ncols", "nused", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "data flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9219,
+      [ "ncols", "nused", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "data flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9218,
+      [ "ncols", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9212,
+      [ "version", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9161,
+      [ "version", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9154,
+      [ "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9143,
+      [ "do_display", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9134,
+      [ "nslots", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "data flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9131,
+      [ "nslots", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "data flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9130,
+      [ "nslots", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "data flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9129,
+      [ "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9127,
+      [ "amount", "nslots", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9126,
+      [ "amount", "nused", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9124,
+      [ "version", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9123,
+      [ "amount", "version", "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9116,
+      [ "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "control flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9110,
+      [ "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "data flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9095,
+      [ "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ],
+   [
+      "data flow",
+      "../../binutils/dwarf.c",
+      "process_cu_tu_index",
+      9094,
+      [ "LOWFAT_GLOBAL_MS__readelf_get_data_423" ]
+   ]
+]
+

@@ -1,0 +1,4 @@
+(Or (Not (Eq 0
+               do_display))
+     (Ult 8
+           LOWFAT_GLOBAL_MS__readelf_get_data_423))

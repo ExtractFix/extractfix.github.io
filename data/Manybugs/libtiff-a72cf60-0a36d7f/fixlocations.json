@@ -1,0 +1,31 @@
+[
+   [
+      "control flow",
+      "../../libtiff/tif_dirread.c",
+      "TIFFFetchData",
+      989,
+      [ "cp", "tif->tif_base", "dir->tdir_offset", "cc", "w" ]
+   ],
+   [
+      "control flow",
+      "../../libtiff/tif_dirread.c",
+      "TIFFFetchData",
+      981,
+      [ "cp", "tif->tif_base", "dir->tdir_offset", "cc", "w" ]
+   ],
+   [
+      "control flow",
+      "../../libtiff/tif_dirread.c",
+      "TIFFFetchData",
+      978,
+      [ "cp", "tif->tif_base", "dir->tdir_offset", "w", "cc" ]
+   ],
+   [
+      "data flow",
+      "../../libtiff/tif_dirread.c",
+      "TIFFFetchData",
+      975,
+      [ "cp", "tif->tif_base", "dir->tdir_offset", "w" ]
+   ]
+]
+

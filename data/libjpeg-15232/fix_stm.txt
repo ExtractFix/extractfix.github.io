@@ -1,0 +1,1 @@
+	for (row = 0; row < num_rows; row++) {

@@ -1,0 +1,45 @@
+[
+   [
+      "control flow",
+      "../../tools/tiff2ps.c",
+      "PSDataColorContig",
+      2466,
+      [ "breaklen", "nc", "LOWFAT_GLOBAL_MS__tif_unix__TIFFmalloc_316" ]
+   ],
+   [
+      "control flow",
+      "../../tools/tiff2ps.c",
+      "PSDataColorContig",
+      2462,
+      [ "nc", "LOWFAT_GLOBAL_MS__tif_unix__TIFFmalloc_316" ]
+   ],
+   [
+      "control flow",
+      "../../tools/tiff2ps.c",
+      "PSDataColorContig",
+      2452,
+      [ "row", "nc", "LOWFAT_GLOBAL_MS__tif_unix__TIFFmalloc_316" ]
+   ],
+   [
+      "control flow",
+      "../../tools/tiff2ps.c",
+      "PSDataColorContig",
+      2451,
+      [ "row", "h", "nc", "LOWFAT_GLOBAL_MS__tif_unix__TIFFmalloc_316" ]
+   ],
+   [
+      "control flow",
+      "../../tools/tiff2ps.c",
+      "PSDataColorContig",
+      2447,
+      [ "nc", "LOWFAT_GLOBAL_MS__tif_unix__TIFFmalloc_316" ]
+   ],
+   [
+      "data flow",
+      "../../tools/tiff2ps.c",
+      "PSDataColorContig",
+      2440,
+      [ "breaklen", "es", "nc", "LOWFAT_GLOBAL_MS__tif_unix__TIFFmalloc_316" ]
+   ]
+]
+

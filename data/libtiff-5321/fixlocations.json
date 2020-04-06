@@ -1,0 +1,38 @@
+[
+   [
+      "control flow",
+      "../../tools/tiffcrop.c",
+      "readSeparateTilesIntoBuffer",
+      993,
+      [ "spp", "s" ]
+   ],
+   [
+      "control flow",
+      "../../tools/tiffcrop.c",
+      "readSeparateTilesIntoBuffer",
+      991,
+      [ "imagewidth", "col", "s" ]
+   ],
+   [
+      "control flow",
+      "../../tools/tiffcrop.c",
+      "readSeparateTilesIntoBuffer",
+      990,
+      [ "tl", "row", "imagelength", "nrow", "s" ]
+   ],
+   [
+      "control flow",
+      "../../tools/tiffcrop.c",
+      "readSeparateTilesIntoBuffer",
+      988,
+      [ "tl", "row", "imagelength", "s" ]
+   ],
+   [
+      "control flow",
+      "../../tools/tiffcrop.c",
+      "readSeparateTilesIntoBuffer",
+      971,
+      [ "spp", "sample", "s" ]
+   ]
+]
+

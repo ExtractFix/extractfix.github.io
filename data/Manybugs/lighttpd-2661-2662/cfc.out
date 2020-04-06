@@ -1,0 +1,1 @@
+../../src/buffer.c:buffer_prepare_append:115#(b->ptr != 0)

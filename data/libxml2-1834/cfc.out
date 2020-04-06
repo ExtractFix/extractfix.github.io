@@ -1,0 +1,1 @@
+../xmlstring.c:xmlStrncat:460#((((size > 0) & (len > 0) & (size < 2147483647 - len)) | ((size < 0) & (len < 0) & (size > -2147483648 - len))))

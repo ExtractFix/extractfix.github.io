@@ -1,0 +1,13 @@
+(And (Or (Not (Eq false
+                   (Eq 18446744073709551615
+                        initial_read)))
+          (Ule 0
+               (Sub  initial_read
+                     start)))
+      (Or (Not (And (Eq 18446744073709551615
+                         initial_read)
+                    (Ult  start
+                         18446744073709551615)))
+          (Ule 0
+               (Sub  initial_read
+                     start))))

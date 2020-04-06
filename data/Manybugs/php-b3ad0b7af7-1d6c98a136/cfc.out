@@ -1,0 +1,1 @@
+../../Zend/zend_vm_execute.h:ZEND_INIT_STATIC_METHOD_CALL_SPEC_CONST_CONST_HANDLER:3401#(opline->op1.literal!=0)

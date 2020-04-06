@@ -1,0 +1,1 @@
+			assert(pa!=0 && *pa<=0xFFFFFFFFUL)

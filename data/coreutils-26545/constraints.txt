@@ -1,0 +1,7 @@
+(Or (Not (Ult  i
+                size))
+     (Ule (Add 61243392
+               (Sub  size
+                     i))
+          (Add 61243392
+                i)))

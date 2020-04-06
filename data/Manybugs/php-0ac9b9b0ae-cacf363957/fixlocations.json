@@ -1,0 +1,10 @@
+[
+   [
+      "control flow",
+      "../../Zend/zend_vm_execute.h",
+      "ZEND_SEND_VAL_SPEC_CONST_HANDLER",
+      2363,
+      [ "opline->extended_value", "ZEND_DO_FCALL_BY_NAME", "ARG_MUST_BE_SENT_BY_REF(EX(fbc), opline->op2.opline_num)" ]
+   ]
+]
+

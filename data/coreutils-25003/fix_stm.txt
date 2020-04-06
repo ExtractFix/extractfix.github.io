@@ -1,0 +1,2 @@
+  if (initial_read != SIZE_MAX || start < initial_read)
+positive

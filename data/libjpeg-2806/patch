@@ -1,0 +1,2 @@
+  for (i = 0; i < 4; i++)
+  for (ci = 0, compptr = cinfo->comp_info; ci < cinfo->num_components && ci < 4

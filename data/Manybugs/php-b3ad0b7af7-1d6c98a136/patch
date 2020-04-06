@@ -1,0 +1,1 @@
+                if (opline->op1.literal!=0 && CACHED_PTR(opline->op1.literal->cache_slot)) {

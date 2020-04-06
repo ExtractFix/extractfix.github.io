@@ -1,0 +1,38 @@
+[
+   [
+      "control flow",
+      "../../main/spprintf.c",
+      "FIX_PRECISION",
+      179,
+      [ "s_len", "s", "precision", "s_length" ]
+   ],
+   [
+      "control flow",
+      "../../main/spprintf.c",
+      "xbuf_format_converter",
+      442,
+      [ "s_len", "s", "precision", "fmt", "s_length" ]
+   ],
+   [
+      "control flow",
+      "../../main/spprintf.c",
+      "xbuf_format_converter",
+      391,
+      [ "s_len", "s", "precision", "fmt", "s_length" ]
+   ],
+   [
+      "data flow",
+      "../../main/spprintf.c",
+      "xbuf_format_converter",
+      302,
+      [ "s_len", "s", "precision", "s_length" ]
+   ],
+   [
+      "data flow",
+      "../../main/spprintf.c",
+      "xbuf_format_converter",
+      297,
+      [ "s_len", "s", "precision", "s_length" ]
+   ]
+]
+

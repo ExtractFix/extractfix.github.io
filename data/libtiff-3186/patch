@@ -1,0 +1,1 @@
+while ((count = getc(infile)) && ((count<=255) && (0<=count)))

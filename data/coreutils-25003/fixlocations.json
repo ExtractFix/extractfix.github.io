@@ -1,0 +1,31 @@
+[
+   [
+      "control flow",
+      "../src/split.c",
+      "bytes_chunk_extract",
+      985,
+      [ "initial_read", "start" ]
+   ],
+   [
+      "control flow",
+      "../src/split.c",
+      "bytes_chunk_extract",
+      983,
+      [ "k", "n", "initial_read", "file_size", "start", "end" ]
+   ],
+   [
+      "data flow",
+      "../src/split.c",
+      "bytes_chunk_extract",
+      982,
+      [ "k", "n", "initial_read", "file_size", "start" ]
+   ],
+   [
+      "control flow",
+      "../src/split.c",
+      "bytes_chunk_extract",
+      980,
+      [ "k", "n", "initial_read", "file_size", "start" ]
+   ]
+]
+

@@ -1,0 +1,2 @@
+../parser.c:xmlParseEndTag2:9837#(tlen < LOWFAT_GLOBAL_MS__buf_xmlBufGrowInternal_486)
+ctxt->input->cur#UNKNOWN*

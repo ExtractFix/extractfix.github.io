@@ -1,0 +1,1 @@
+	ctr.line_len = header_line_length - 1;

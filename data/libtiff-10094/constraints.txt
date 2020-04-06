@@ -1,0 +1,5 @@
+(Ult (Add 18446744073709551615
+           (Add  bufferoffset
+                (Add 4294967294
+                      count)))
+       LOWFAT_GLOBAL_MS__tif_unix__TIFFmalloc_316)

@@ -1,0 +1,24 @@
+[
+   [
+      "control flow",
+      "../../ext/phar/phar_object.c",
+      "Phar",
+      634,
+      [ "PHAR_GLOBALS->phar_fname_map.arBuckets" ]
+   ],
+   [
+      "control flow",
+      "../../ext/phar/phar_object.c",
+      "Phar",
+      587,
+      [ "PHAR_GLOBALS->phar_fname_map", "fname_len" ]
+   ],
+   [
+      "control flow",
+      "../../ext/phar/phar_object.c",
+      "Phar",
+      576,
+      [ "PHAR_GLOBALS->phar_fname_map" ]
+   ]
+]
+

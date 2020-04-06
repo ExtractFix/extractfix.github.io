@@ -1,0 +1,24 @@
+[
+   [
+      "control flow",
+      "../xmlstring.c",
+      "xmlStrncat",
+      456,
+      [ "len", "size" ]
+   ],
+   [
+      "control flow",
+      "../xmlstring.c",
+      "xmlStrncat",
+      454,
+      [ "len", "size" ]
+   ],
+   [
+      "control flow",
+      "../xmlstring.c",
+      "xmlStrncat",
+      452,
+      [ "len", "size" ]
+   ]
+]
+

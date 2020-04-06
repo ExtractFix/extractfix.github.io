@@ -1,0 +1,87 @@
+[
+   [
+      "data flow",
+      "libavcodec/dfa.c",
+      "decode_dds1",
+      183,
+      [ "width", "LOWFAT_GLOBAL_MS__dfa_dfa_decode_init_49" ]
+   ],
+   [
+      "data flow",
+      "libavcodec/dfa.c",
+      "decode_dds1",
+      182,
+      [ "width", "LOWFAT_GLOBAL_MS__dfa_dfa_decode_init_49" ]
+   ],
+   [
+      "data flow",
+      "libavcodec/dfa.c",
+      "decode_dds1",
+      181,
+      [ "width", "LOWFAT_GLOBAL_MS__dfa_dfa_decode_init_49" ]
+   ],
+   [
+      "control flow",
+      "libavcodec/dfa.c",
+      "decode_dds1",
+      179,
+      [ "width", "LOWFAT_GLOBAL_MS__dfa_dfa_decode_init_49" ]
+   ],
+   [
+      "control flow",
+      "libavcodec/dfa.c",
+      "decode_dds1",
+      173,
+      [ "width", "mask", "bitbuf", "LOWFAT_GLOBAL_MS__dfa_dfa_decode_init_49" ]
+   ],
+   [
+      "control flow",
+      "libavcodec/dfa.c",
+      "decode_dds1",
+      161,
+      [ "width", "mask", "bitbuf", "LOWFAT_GLOBAL_MS__dfa_dfa_decode_init_49" ]
+   ],
+   [
+      "control flow",
+      "libavcodec/dfa.c",
+      "decode_dds1",
+      156,
+      [ "width", "mask", "LOWFAT_GLOBAL_MS__dfa_dfa_decode_init_49" ]
+   ],
+   [
+      "control flow",
+      "libavcodec/dfa.c",
+      "decode_dds1",
+      154,
+      [ "width", "LOWFAT_GLOBAL_MS__dfa_dfa_decode_init_49" ]
+   ],
+   [
+      "control flow",
+      "libavcodec/dfa.c",
+      "decode_dds1",
+      153,
+      [ "width", "segments", "LOWFAT_GLOBAL_MS__dfa_dfa_decode_init_49" ]
+   ],
+   [
+      "data flow",
+      "libavcodec/dfa.c",
+      "decode_dds1",
+      148,
+      [ "width", "height", "LOWFAT_GLOBAL_MS__dfa_dfa_decode_init_49" ]
+   ],
+   [
+      "control flow",
+      "libavcodec/bytestream.h",
+      "decode_dds1",
+      95,
+      [ "LOWFAT_GLOBAL_MS__dfa_dfa_decode_init_49" ]
+   ],
+   [
+      "control flow",
+      "libavcodec/bytestream.h",
+      "decode_dds1",
+      90,
+      [ "LOWFAT_GLOBAL_MS__dfa_dfa_decode_init_49" ]
+   ]
+]
+

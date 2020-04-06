@@ -1,0 +1,2 @@
+for (i = 0; i < MAX_COMPS_IN_SCAN; i++)
+for (ci = 0, compptr = cinfo->comp_info;

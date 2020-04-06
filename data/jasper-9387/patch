@@ -1,0 +1,1 @@
+if(!dec->yend >= dec->tileyoff) return -1;

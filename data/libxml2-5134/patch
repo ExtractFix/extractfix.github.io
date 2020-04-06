@@ -1,0 +1,1 @@
+    while ((len > 0) && (buf[len - 1] == 0x20))

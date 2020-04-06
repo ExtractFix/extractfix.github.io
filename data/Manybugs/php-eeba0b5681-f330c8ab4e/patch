@@ -1,0 +1,1 @@
+	const int window_size = 1024 + size(token) - token_size;

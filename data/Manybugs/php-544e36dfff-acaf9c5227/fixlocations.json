@@ -1,0 +1,31 @@
+[
+   [
+      "control flow",
+      "../../Zend/zend_API.c",
+      "zend_is_callable_ex",
+      2913,
+      [ "callable", "object_ptr" ]
+   ],
+   [
+      "control flow",
+      "../../Zend/zend_API.c",
+      "zend_is_callable_ex",
+      2910,
+      [ "callable", "object_ptr" ]
+   ],
+   [
+      "control flow",
+      "../../ext/session/mod_user.c",
+      "ps_call_handler",
+      55,
+      [ "func" ]
+   ],
+   [
+      "control flow",
+      "../../ext/session/mod_user.c",
+      "PS_OPEN_FUNC",
+      89,
+      [ "open" ]
+   ]
+]
+

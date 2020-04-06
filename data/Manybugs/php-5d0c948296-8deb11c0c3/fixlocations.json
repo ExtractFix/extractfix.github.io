@@ -1,0 +1,24 @@
+[
+   [
+      "control flow",
+      "../../ext/spl/spl_directory.c",
+      "spl_filesystem_object_get_path",
+      170,
+      [ "intern", "intern->u" ]
+   ],
+   [
+      "control flow",
+      "../../ext/spl/spl_directory.c",
+      "spl_filesystem_object_get_path",
+      169,
+      [ "intern", "intern->u", "intern->type" ]
+   ],
+   [
+      "control flow",
+      "../../ext/spl/spl_directory.c",
+      "spl_filesystem_object_get_file_name",
+      185,
+      [ "intern", "intern->u", "intern->filename" ]
+   ]
+]
+
