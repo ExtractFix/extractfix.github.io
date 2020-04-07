@@ -38,7 +38,6 @@
                             <th>ID </th>
                             <th>Patch</th>
                             <th>Correctness </th>
-                            <th>Bug Report</th>
                             <th>Developer Fix</th>
                             <th>Raw data</th>
                         </tr>
@@ -50,9 +49,8 @@
                             <td>207c78a</td>
                             <td><pre><code class="language-diff"> ---    </code></pre></td>
                             <td>Fail</td>
-                            <td><a href="http://bugzilla.remotesensing.org/show_bug.cgi?id=1088">report</a></td>
                             <td><a href="https://github.com/vadz/libtiff/commit/207c78a">207c78a</a></td>
-                            <td></td>
+                            <td>---</td>
                         </tr>
 
                         <tr>
@@ -63,11 +61,238 @@
 +          if (tif->tif_base + dir->tdir_offset + cc > cp 
 +              && cp + cc > tif->tif_base + dir->tdir_offset)</code></pre></td>
                             <td>Semantic equivalent</td>
-                            <td></td>
                             <td><a href="https://github.com/vadz/libtiff/commit/0a36d7f">0a36d7f</a></td>
                             <td><a href="./data/ManyBugs/libtiff-a72cf60-0a36d7f">data</a></td>
                         </tr>
 
+                        <tr>
+                            <td>Libtiff</td>
+                            <td>ee65c74</td>
+                            <td><pre><code class="language-diff">-     if (dir->tdir_offset + cc > tif->tif_size)
++     if (tif->tif_base + dir->tdir_offset + cc > cp 
++        && cp + cc > tif->tif_base + dir->tdir_offset)</code></pre></td>
+                            <td>Plausible</td>
+                            <td><a href="https://github.com/vadz/libtiff/commit/ee65c74">ee65c74</a></td>
+                            <td><a href="./data/ManyBugs/libtiff-eec4c06-ee65c74">data</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>Libtiff</td>
+                            <td>865f7b2</td>
+                            <td><pre><code class="language-diff"></code></pre></td>
+                            <td>Fail</td>
+                            <td><a href="https://github.com/vadz/libtiff/commit/865f7b2">865f7b2</a></td>
+                            <td>---</td>
+                        </tr>
+
+                        <tr>
+                            <td>Libtiff</td>
+                            <td>565eaa2</td>
+                            <td><pre><code class="language-diff">-    assert(*pa<=0xFFFFFFFFUL)
++    assert(pa!=0 && *pa<=0xFFFFFFFFUL)</code></pre></td>
+                            <td>Semantic equivalent</td>
+                            <td><a href="https://github.com/vadz/libtiff/commit/565eaa2">565eaa2</a></td>
+                            <td><a href="./data/ManyBugs/libtiff-362dee5-565eaa2">data</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>Lighttd</td>
+                            <td>1914</td>
+                            <td><pre><code class="language-diff">---</code></pre></td>
+                            <td>Fail</td>
+                            <td>---</td>
+                            <td>---</td>
+                        </tr>
+
+                        <tr>
+                            <td>Lighttd</td>
+                            <td>2662</td>
+                            <td><pre><code class="language-diff">+    if (b->ptr == 0) return -1;</code></pre></td>
+                            <td>Semantic equivalent</td>
+                            <td><a href="https://redmine.lighttpd.net/issues/1551">1551</a></td>
+                            <td><a href="./data/ManyBugs/lighttd-2661-2662">data</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>Lighttd</td>
+                            <td>2786</td>
+                            <td><pre><code class="language-diff">-    if (NULL == (sl = strchr(BUF_STR(req->uri_raw) + 7, '/'))) 
++    if (NULL == (sl = strchr(BUF_STR(req->uri_raw) + 7, '/')) 
++        || sl <= req->uri_raw+7)</code></pre></td>
+                            <td>Plausible</td>
+                            <td><a href="https://redmine.lighttpd.net/issues/1980">1980</a></td>
+                            <td><a href="./data/ManyBugs/lighttd-2785-2786">data</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>php</td>
+                            <td>5bb0a44e06</td>
+                            <td><pre><code class="language-diff">-    if (have_format_spec) 
++    if (have_format_spec && t != 0)</code></pre></td>
+                            <td>Plausible</td>
+                            <td><a href="https://github.com/php/php-src/commit/5bb0a44e06">5bb0a44e06</a></td>
+                            <td><a href="./data/ManyBugs/php-147382033a-5bb0a44e06">data</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>php</td>
+                            <td>426f31e790</td>
+                            <td><pre><code class="language-diff">-    if (pp-p < 6 && (*pp == '/' || *pp == '\0'))
++    if (pp-p>0 && pp-p < 6 && (*pp == '/' || *pp == '\0'))</code></pre></td>
+                            <td>Syntactic equivalent</td>
+                            <td><a href="https://github.com/php/php-src/commit/426f31e790">426f31e790</a></td>
+                            <td><a href="./data/ManyBugs/php-c50b3d7add-426f31e790">data</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>php</td>
+                            <td>2a6968e43a</td>
+                            <td><pre><code class="language-diff">-    while (s_len < precision)
++    while (s_len < precision && s_len < s_length)</code></pre></td>
+                            <td>Semantic equivalent</td>
+                            <td><a href="https://github.com/php/php-src/commit/2a6968e43a">2a6968e43a</a></td>
+                            <td><a href="./data/ManyBugs/php-b21f62eb2d-2a6968e43a">data</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>php</td>
+                            <td>7f2937223d</td>
+                            <td><pre><code class="language-diff">---</code></pre></td>
+                            <td>Fail</td>
+                            <td><a href="https://github.com/php/php-src/commit/7f2937223d">7f2937223d</a></td>
+                            <td>---</td>
+                        </tr>
+
+                        <tr>
+                            <td>php</td>
+                            <td>2adf58cfcf</td>
+                            <td><pre><code class="language-diff">-    if (isostr)
++    if (isostr && isostr_len)</code></pre></td>
+                            <td>Syntactic equivalent</td>
+                            <td><a href="https://github.com/php/php-src/commit/2adf58cfcf">2adf58cfcf</a></td>
+                            <td><a href="./data/ManyBugs/php-63673a533f-2adf58cfcf">data</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>php</td>
+                            <td>3acdca4703</td>
+                            <td><pre><code class="language-diff">-    else if (SUCCESS == zend_hash_find(&(PHAR_GLOBALS->phar_fname_map),
+-               fname, fname_len, (void **)&pphar)) 
++    else if (PHAR_GLOBALS->phar_fname_map.arBuckets != 0 
++             && SUCCESS == zend_hash_find(&(PHAR_GLOBALS->phar_fname_map), 
++                 fname, fname_len, (void **)&pphar))</code></pre></td>
+                            <td>Syntactic equivalent</td>
+                            <td><a href="https://github.com/php/php-src/commit/3acdca4703">3acdca4703</a></td>
+                            <td><a href="./data/ManyBugs/php-8138f7de40-3acdca4703">data</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>php</td>
+                            <td>c2fe893985</td>
+                            <td><pre><code class="language-diff">---</code></pre></td>
+                            <td>Fail</td>
+                            <td><a href="https://github.com/php/php-src/commit/c2fe893985">c2fe893985</a></td>
+                            <td>---</td>
+                        </tr>
+
+                        <tr>
+                            <td>php</td>
+                            <td>93f65cdeac</td>
+                            <td><pre><code class="language-diff">---</code></pre></td>
+                            <td>Fail</td>
+                            <td><a href="https://github.com/php/php-src/commit/93f65cdeac">93f65cdeac</a></td>
+                            <td>---</td>
+                        </tr>   
+
+                        <tr>
+                            <td>php</td>
+                            <td>8d520d6296</td>
+                            <td><pre><code class="language-diff">-    if (php_stream_is(intern->u.dir.dirp ,&php_glob_stream_ops))
++    if (intern->u != 0 && 
++       php_stream_is(intern->u.dir.dirp ,&php_glob_stream_ops))</code></pre></td>
+                            <td>Semantic equivalent</td>
+                            <td><a href="https://github.com/php/php-src/commit/8d520d6296">8d520d6296</a></td>
+                            <td><a href="./data/ManyBugs/php-de50e98a07-8d520d6296">data</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>php</td>
+                            <td>cacf363957</td>
+                            <td><pre><code class="language-diff">-     && ARG_MUST_BE_SENT_BY_REF(EX(fbc), opline->op2.opline_num))
++     && !ARG_MUST_BE_SENT_BY_REF(EX(fbc), opline->op2.opline_num))</code></pre></td>
+                            <td>Plausible</td>
+                            <td><a href="https://github.com/php/php-src/commit/cacf363957">cacf363957</a></td>
+                            <td><a href="./data/ManyBugs/php-0ac9b9b0ae-cacf363957">data</a></td>
+                        </tr>  
+
+                        <tr>
+                            <td>php</td>
+                            <td>c1e510aea8</td>
+                            <td><pre><code class="language-diff">-    if (zend_parse_parameters_none() == FAILURE) 
++    if (intern->file_name == 0 || zend_parse_parameters_none() == FAILURE)</code></pre></td>
+                            <td>Semantic equivalent</td>
+                            <td><a href="https://github.com/php/php-src/commit/c1e510aea8">c1e510aea8</a></td>
+                            <td><a href="./data/ManyBugs/php-fcbfbea8d2-c1e510aea8">data</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>php</td>
+                            <td>f330c8ab4e</td>
+                            <td><pre><code class="language-diff">-       const int window_size = 1024 + size(token);
++       const int window_size = 1024 + size(token) - token_size;</code></pre></td>
+                            <td>Semantic equivalent</td>
+                            <td><a href="https://github.com/php/php-src/commit/f330c8ab4e">f330c8ab4e</a></td>
+                            <td><a href="./data/ManyBugs/php-eeba0b5681-f330c8ab4e">data</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>php</td>
+                            <td>1d6c98a136</td>
+                            <td><pre><code class="language-diff">-        if (CACHED_PTR(opline->op1.literal->cache_slot))
++        if (opline->op1.literal!=0 && CACHED_PTR(opline->op1.literal->cache_slot))</code></pre></td>
+                            <td>Plausible</td>
+                            <td><a href="https://github.com/php/php-src/commit/1d6c98a136">1d6c98a136</a></td>
+                            <td><a href="./data/ManyBugs/php-b3ad0b7af7-1d6c98a136">data</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>php</td>
+                            <td>acaf9c5227</td>
+                            <td><pre><code class="language-diff">-        if (object_ptr &&
++        if (callable == 0 || object_ptr &&</code></pre></td>
+                            <td>Semantic equivalent</td>
+                            <td><a href="https://github.com/php/php-src/commit/acaf9c5227">acaf9c5227</a></td>
+                            <td><a href="./data/ManyBugs/php-544e36dfff-acaf9c5227">data</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>php</td>
+                            <td>032bbc3164</td>
+                            <td><pre><code class="language-diff">-     ctr.line_len = sizeof("HTTP/1.0 403 Access Denied")
++     ctr.line_len = header_line_length - 1</code></pre></td>
+                            <td>Semantic equivalent</td>
+                            <td><a href="https://github.com/php/php-src/commit/032bbc3164">032bbc3164</a></td>
+                            <td><a href="./data/ManyBugs/php-0a91432828-032bbc3164">data</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>php</td>
+                            <td>1923ecfe25</td>
+                            <td><pre><code class="language-diff">---</code></pre></td>
+                            <td>Fail</td>
+                            <td><a href="https://github.com/php/php-src/commit/1923ecfe25">1923ecfe25</a></td>
+                            <td>---</td>
+                        </tr> 
+
+                        <tr>
+                            <td>php</td>
+                            <td>cfa9c90b20</td>
+                            <td><pre><code class="language-diff">-        && ARG_MUST_BE_SENT_BY_REF(EX(fbc), opline->op2.opline_num))
++        && !ARG_MUST_BE_SENT_BY_REF(EX(fbc), opline->op2.opline_num))</code></pre></td>
+                            <td>Plausible</td>
+                            <td><a href="https://github.com/php/php-src/commit/cfa9c90b20">cfa9c90b20</a></td>
+                            <td><a href="./data/ManyBugs/php-c1322d2505-cfa9c90b20">data</a></td>
+                        </tr>                                                                                                                                                                                                                                          
                         <tr>
                             <td></td>
                             <td></td>
