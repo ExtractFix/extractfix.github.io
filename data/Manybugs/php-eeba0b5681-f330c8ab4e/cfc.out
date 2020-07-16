@@ -1,1 +1,0 @@
-../../ext/phar/phar.c:phar_open_from_fp:1724#(window_size + tokenlen < 1024 + sizeof(token))

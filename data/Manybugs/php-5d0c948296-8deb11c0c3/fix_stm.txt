@@ -1,1 +1,0 @@
-		if (php_stream_is(intern->u.dir.dirp ,&php_glob_stream_ops))

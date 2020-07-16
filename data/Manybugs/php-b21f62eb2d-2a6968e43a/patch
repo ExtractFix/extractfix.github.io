@@ -1,1 +1,0 @@
-		while (s_len < precision && s_len < s_length) {

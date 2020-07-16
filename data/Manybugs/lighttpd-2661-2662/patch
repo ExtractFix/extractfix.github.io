@@ -1,1 +1,0 @@
-		if (b->ptr == 0) return -1;

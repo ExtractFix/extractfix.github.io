@@ -1,1 +1,0 @@
-                if (NULL == (sl = strchr(BUF_STR(req->uri_raw) + 7, '/')) || sl <= req->uri_raw+7) {

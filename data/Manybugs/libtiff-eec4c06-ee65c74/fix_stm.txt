@@ -1,1 +1,0 @@
-		if (dir->tdir_offset + cc > tif->tif_size)

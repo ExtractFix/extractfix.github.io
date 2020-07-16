@@ -1,1 +1,0 @@
-	ctr.line_len = sizeof("HTTP/1.0 403 Access Denied");

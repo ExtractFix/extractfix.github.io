@@ -1,1 +1,0 @@
-                if (CACHED_PTR(opline->op1.literal->cache_slot)) {

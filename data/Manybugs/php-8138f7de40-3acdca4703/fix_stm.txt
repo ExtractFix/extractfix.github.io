@@ -1,1 +1,0 @@
-	} else if (SUCCESS == zend_hash_find(&(PHAR_GLOBALS->phar_fname_map), fname, fname_len, (void **)&pphar)) {

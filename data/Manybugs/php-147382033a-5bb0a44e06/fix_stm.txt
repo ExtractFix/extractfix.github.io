@@ -1,1 +1,0 @@
-		if (have_format_spec) {

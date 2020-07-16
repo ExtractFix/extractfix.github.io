@@ -1,1 +1,0 @@
-	if (zend_parse_parameters_none() == FAILURE) {

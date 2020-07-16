@@ -1,1 +1,0 @@
-	if (intern->file_name == 0 || zend_parse_parameters_none() == FAILURE) {

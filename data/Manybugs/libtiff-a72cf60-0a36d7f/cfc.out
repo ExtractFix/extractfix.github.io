@@ -1,1 +1,0 @@
-../../libtiff/tif_dirread.c:TIFFFetchData:992#(tif->tif_base + dir->tdir_offset + cc <= cp || cp + cc <= tif->tif_base + dir->tdir_offset)
