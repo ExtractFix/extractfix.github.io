@@ -48,8 +48,9 @@
 }
 
 .abstract p{
-  font-size:20px;
+  font-size:18px;
   font-weight:200;
+  font-family:Times;
   margin-bottom:30px;
   margin-left:5px;
   margin-right:5px;
@@ -57,6 +58,11 @@
 
 .abstract img{
   margin:5px;
+}
+
+div.media-right{
+  position: absolute;
+  right: 30px;
 }
 
 .download p{
