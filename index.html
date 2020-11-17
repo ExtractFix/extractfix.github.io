@@ -40,27 +40,25 @@
 	  		<p> 
 	  		<img src="architecture.jpg" align="right" height="250" weight="250">
 	  		Automated program repair can be used to prevent exploitation of known security vulnerabilities by attackers. The large potential impact of security vulnerabilities means that the need to avoid incomplete or incorrect fixes is paramount. In this paper, we present a new mechanism for automatically generating provably correct repair of security vulnerabilities. Given a program vulnerability witnessed by some crashing input or exploit, our basic approach relies on extracting a constraint representation of the underlying cause of the crash.  This crash constraint can then be propagated backward to guide program repair over the space of possible fix locations. Our method synthesizes patch that is guaranteed to avoid repeating the original crash, thereby repairing the program for all program inputs not limited to a specific test suite.  As such, our approach helps address the test over-fitting problem (where a suggested repair fails to generalize beyond a given test suite).  An implementation of our method (ExtractFix) built on top of the KLEE symbolic execution engine shows its efficacy in fixing a wide range of vulnerabilities/bugs on subjects taken from CVEs and Google's Open-source-systems OSS Fuzz framework.</p>
-            <p style="color:red;">A demo of our tool can be found <a href="./demo.pdf">here</a>.</p>
+            <p>A demo of our tool can be found <a href="./demo.pdf">here</a>.</p>
 	  		</div>
 	  	</div>
 
         <div class="container">
             <h1 class="text-left"> Publications</h1>
             <div class="abstract">
-                <ul><li>
-                    <div>
-                        <h4>
-                            <div class="media-right"><a></a>
-                                <a class="btn btn-default" role="button" href="http://www.comp.nus.edu.sg/~abhik/pdf/TOSEMextractfix21.pdf">
-                                    <i class="glyphicon glyphicon-download-alt"></i>
-                                </a>
-                            </div>
-                            <strong>Beyond Tests: Program Vulnerability Repair via Crash Constraint Extraction</strong></h4>
+                <div style="float:left;">
+                    <ul><li>
+                        <h4><strong>Beyond Tests: Program Vulnerability Repair via Crash Constraint Extraction</strong></h4>
                         <p class="authors">Xiang Gao, Bo Wang, Gregory J. Duck, Ruyi Ji, Yingfei Xiong, Abhik Roychoudhury</p>
                         <p>Transactions on Software Engineering and Methodology (TOSEM), 2020</p>
-                    </div>
-
-                </li></ul>
+                    </li></ul>
+                </div>
+                <div style="float:left;">
+                    <a href="http://www.comp.nus.edu.sg/~abhik/pdf/TOSEMextractfix21.pdf"> 
+                        <img border="0" alt="W3Schools" src="pdf.png" width="25" height="25">
+                    </a>
+                </div>
             </div>
         </div>
 
